@@ -1,0 +1,28 @@
+<!doctype html>
+<title>Simple tables</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Earthquake competition</h1>
+    <head>
+
+
+
+
+
+<form method="POST">
+    <input name="text">
+    <input type="submit">
+</form>
+
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+</div>
